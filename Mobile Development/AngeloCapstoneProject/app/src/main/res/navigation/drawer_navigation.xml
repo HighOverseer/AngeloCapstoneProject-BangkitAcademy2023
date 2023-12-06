@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/live_view">
+
+
+    <fragment
+        android:id="@+id/live_view"
+        android:name="com.example.angelocapstoneproject.ui.home.fragments.LiveViewFragment"
+        android:label="@string/live_view"
+        tools:layout="@layout/fragment_live_view" />
+    <fragment
+        android:id="@+id/devices"
+        android:name="com.example.angelocapstoneproject.ui.home.fragments.DevicesFragment"
+        android:label="@string/devices"
+        tools:layout="@layout/fragment_devices" />
+    <fragment
+        android:id="@+id/playback"
+        android:name="com.example.angelocapstoneproject.ui.home.fragments.PlaybackFragment"
+        android:label="@string/playback"
+        tools:layout="@layout/fragment_playback" />
+    <fragment
+        android:id="@+id/emergency_contact"
+        android:name="com.example.angelocapstoneproject.ui.home.fragments.EmergencyContactFragment"
+        android:label="@string/emergency_contact"
+        tools:layout="@layout/fragment_emergency_contact" />
+</navigation>

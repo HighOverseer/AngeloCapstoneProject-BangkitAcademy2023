@@ -67,6 +67,70 @@ Developing the Angelo mobile application for Android devices.
    - Conducted thorough testing to ensure seamless functionality.
    - Optimized the application's performance for user responsiveness.
 
+
+
+# Angelo Fall Detection API
+
+This repository contains the Flask API for Angelo Emergency Response Application, enabling fall detection based on body posture recognition.
+
+## Usage
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023
+    ```
+
+2. Install virtual environment:
+    ```bash
+    python -m venv venv
+    ```
+
+3. Install necessary requirements:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Run the Flask API:
+    ```bash
+    flask run
+    ```
+    or
+    ```bash
+    python app.py
+    ```
+
+## API Endpoints
+
+The API endpoints can be accessed at [https://angelo-fall-detection-y7rr5xpfna-uc.a.run.app/](https://angelo-fall-detection-y7rr5xpfna-uc.a.run.app/).
+
+## API Routes
+
+The Flask API includes the following routes:
+
+- **POST /predict**: 
+    - Endpoint for detecting falls in uploaded images.
+- **POST /predict_video**: 
+    - Endpoint for detecting falls in uploaded videos.
+- **GET /detect_video_stream**: 
+    - Endpoint for streaming video from the camera and detecting falls in real-time.
+- **GET /files**: 
+    - Endpoint to display a list of uploaded files along with their upload dates information.
+- **GET /files/<filename>**: 
+    - Endpoint to display specific information about a single file.
+
+## Code Overview
+
+The API integrates fall detection algorithms using a pre-trained model for detecting falls in images and videos. It includes functions for performing fall detection on frames, image streams, and video streams.
+
+### File Structure
+
+- **app.py**: Main Flask application file containing API routes and fall detection functions.
+- **models/fall_detection_fix_model.h5**: Pre-trained fall detection model.
+- **static/uploads/**: Folder to temporarily store uploaded files.
+- **gcloud-credentials.json**: Google Cloud Storage credentials for storing files.
+
+
+
 ### Team Collaboration
 
 All teams collaborated to integrate their components into the Angelo application, creating a holistic solution for fall detection and emergency response.

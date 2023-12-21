@@ -15,12 +15,16 @@ Building a model for fall detection based on body posture recognition.
    - Sourced relevant datasets for model training.
    - Compiled a dataset with 485 images for training and validation.
 
-2. **Model Creation:**
-   - Used Keras and TensorFlow for model creation.
-   - Implemented the YOLOv4 deep learning architecture.
+2. **Model Training:**
+   - Utilized Keras and TensorFlow for training the fall detection model.
+   - Employed the YOLOv4 deep learning architecture.
    - Achieved a model accuracy of 99% with a split of 55% fall and 45% non-fall instances.
 
-3. **Model Optimization:**
+3. **Model Creation:**
+   - Saved the trained model as `fall_detection_model.h5`.
+   - Integrated the model with Flask to create an API.
+
+4. **Model Utilization:**
    - Adjusted thresholds for fall detection based on model performance.
    - Fine-tuned normalization techniques for image preprocessing.
 

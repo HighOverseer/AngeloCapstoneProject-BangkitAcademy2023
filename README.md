@@ -2,8 +2,6 @@
 
 This repository documents the process and components of the Angelo Emergency Response Application for falling people detection based on body posture recognition.
 
-
-
 <p align="center">
   <img src="Angelo.png" alt="Angelo logo" height="180" />
 </p>
@@ -130,17 +128,17 @@ The Flask API includes the following routes:
 
 The API integrates fall detection algorithms using a pre-trained model for detecting falls in images and videos. It includes functions for performing fall detection on frames, image streams, and video streams.
 
-### File Structure
-
-- **app.py**: Main Flask application file containing API routes and fall detection functions.
-- **models/fall_detection_fix_model.h5**: Pre-trained fall detection model.
-- **static/uploads/**: Folder to temporarily store uploaded files.
-- **gcloud-credentials.json**: Google Cloud Storage credentials for storing files.
-
-
-
 ### Team Collaboration
 
 All teams collaborated to integrate their components into the Angelo application, creating a holistic solution for fall detection and emergency response.
+
+|            Member           | Student ID |        Path        |                    University                    |                                                       Contacts                                                      |
+| :-------------------------: | :--------: | :----------------: | :----------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+|        Samuel Theodore, Lie        | M200BSY1389 |  Machine Learning  | Universitas Diponegoro |           [LinkedIn](https://www.linkedin.com/in/samueltheodore/)          |
+|      Giselle Ameris Wibowo, Bok     | M180BSX1090 |  Machine Learning  |          Universitas Airlangga         |   [LinkedIn](https://www.linkedin.com/in/giselle-ameris-wibowo-bok-7b8b17217/)   |
+|     Niken Kurniasari     | M180BSX1172 | Machine Learning |          Universitas Airlangga          |             [LinkedIn](https://www.linkedin.com/in/niken-kurniasari-18034b247/)             |
+|      Yuma Zahran Ewaldo     | C180BSY4169 | Cloud Computing |          Universitas Airlangga          |    [LinkedIn](https://www.linkedin.com/in/yuma-zahran-ewaldo/)     |
+|     Lintang Trisnadi     | C006BSY3469 |   Cloud Computing  |               Universitas Brawijaya              |            [LinkedIn](https://www.linkedin.com/in/lintang-trisnadi/)             |
+| Fajar Alif Riyandi | A184BSY2030 |   Mobile Development  |         Universitas Andalas         | [LinkedIn](https://www.linkedin.com/in/fajar-alif-riyandi-b257512a1/)  |
 
 ---

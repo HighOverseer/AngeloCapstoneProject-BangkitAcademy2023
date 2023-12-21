@@ -8,8 +8,6 @@ This repository documents the process and components of the Angelo Emergency Res
 
 <h1 align="center">Angelo</h1>
 
-<div align="center">
-
 ## Documentation Structure
 
 ### 1. Model Documentation

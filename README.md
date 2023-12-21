@@ -2,6 +2,8 @@
 
 This repository documents the process and components of the Angelo Emergency Response Application for falling people detection based on body posture recognition.
 
+
+
 <p align="center">
   <img src="Angelo.png" alt="Angelo logo" height="180" />
 </p>

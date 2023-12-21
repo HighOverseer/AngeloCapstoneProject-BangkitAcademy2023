@@ -67,5 +67,3 @@ Developing the Angelo mobile application for Android devices.
 All teams collaborated to integrate their components into the Angelo application, creating a holistic solution for fall detection and emergency response.
 
 ---
-
-Ensure to update specific details and achievements of each team's efforts within the actual project. This serves as a general framework that can be filled with information pertinent to the project's progress and steps taken.

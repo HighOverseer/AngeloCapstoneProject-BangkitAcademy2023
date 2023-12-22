@@ -130,7 +130,7 @@ The Flask API includes the following routes:
 
 The API integrates fall detection algorithms using a pre-trained model for detecting falls in images and videos. It includes functions for performing fall detection on frames, image streams, and video streams.
 
-### Team Collaboration
+## Team Collaboration
 
 All teams collaborated to integrate their components into the Angelo application, creating a holistic solution for fall detection and emergency response.
 

@@ -104,7 +104,7 @@ This repository contains the Flask API for Angelo Emergency Response Application
     ```bash
     python app.py
     ```
-## Angelo Flask API Repository : [Flask API] (https://github.com/lintangtrisnadi/Angelo-Flask-API)
+Angelo Flask API Repository : [Flask API] (https://github.com/lintangtrisnadi/Angelo-Flask-API)
 
 ## API Endpoints
 

@@ -79,6 +79,8 @@ Developing the Angelo mobile application for Android devices.
 
 This repository contains the Flask API for Angelo Emergency Response Application, enabling fall detection based on body posture recognition.
 
+Angelo Flask API Repository : https://github.com/lintangtrisnadi/Angelo-Flask-API
+
 ## Usage
 
 1. Clone the repository:
@@ -104,7 +106,6 @@ This repository contains the Flask API for Angelo Emergency Response Application
     ```bash
     python app.py
     ```
-Angelo Flask API Repository : [Flask API] (https://github.com/lintangtrisnadi/Angelo-Flask-API)
 
 ## API Endpoints
 

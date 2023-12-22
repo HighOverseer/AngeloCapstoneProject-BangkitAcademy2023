@@ -73,7 +73,9 @@ Developing the Angelo mobile application for Android devices.
    - Conducted thorough testing to ensure seamless functionality.
    - Optimized the application's performance for user responsiveness.
 
+## App Overview
 
+![AngeloApp](https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy202/AngeloOverview.png)
 
 # Angelo Fall Detection API
 

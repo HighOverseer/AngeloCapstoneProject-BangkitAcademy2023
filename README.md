@@ -75,7 +75,7 @@ Developing the Angelo mobile application for Android devices.
 
 ## App Overview
 
-![AngeloApp](https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023/AngeloOverview.png)
+![AngeloApp](https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023/blob/main/AngeloOverview.png)
 
 # Angelo Fall Detection API
 

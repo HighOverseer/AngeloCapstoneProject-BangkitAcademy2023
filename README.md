@@ -8,6 +8,10 @@ This repository documents the process and components of the Angelo Emergency Res
 
 <h1 align="center">Angelo</h1>
 
+## App Overview
+
+![AngeloApp](https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023/blob/main/AngeloOverview.png)
+
 ## Documentation Structure
 
 ### 1. Model Documentation
@@ -73,9 +77,6 @@ Developing the Angelo mobile application for Android devices.
    - Conducted thorough testing to ensure seamless functionality.
    - Optimized the application's performance for user responsiveness.
 
-## App Overview
-
-![AngeloApp](https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023/blob/main/AngeloOverview.png)
 
 # Angelo Fall Detection API
 

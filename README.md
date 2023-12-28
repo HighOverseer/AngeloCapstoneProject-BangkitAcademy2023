@@ -113,6 +113,9 @@ Angelo Flask API Repository : https://github.com/lintangtrisnadi/Angelo-Flask-AP
 
 ![AngeloCloudArchitecture](https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023/blob/main/AngeloArchitecture.jpg)
 
+## Angelo Application System
+
+![AngeloAppSystem](https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023/blob/main/AngeloAppSystem.jpg)
 
 ## API Endpoints
 

@@ -1,0 +1,24 @@
+{
+  "name": "angelo-cloud-storage",
+  "version": "1.0.0",
+  "description": "Upload File ke Google Cloud Storage",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "upload",
+    "file",
+    "google cloud storage",
+    "rest api"
+  ],
+  "author": "lintangtrisnadi",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.8.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}

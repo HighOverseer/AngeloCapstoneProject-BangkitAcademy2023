@@ -14,7 +14,7 @@ from time import sleep
 import random
 from datetime import datetime
 
-IP_ADRESS = "192.168.20.247" # might change in different network
+IP_ADRESS = "192.168.20.247" # might change in different network or device
 SEGMENT = "CAM_192_168_20_247"
 
 class Frame_Worker_Thread(Thread):

@@ -2,21 +2,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="true"/>
+
+   <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <application
         android:allowBackup="true"
+        android:name=".ApplicationClass"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AngeloCapstoneProject.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <receiver android:name=".domain.CallEmergencyReceiver" android:exported="true" android:enabled="true"/>
+
         <activity
             android:name=".ui.splash.Splash"
+            android:theme="@style/SplashStyle"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,11 +44,9 @@
         <activity
             android:name=".ui.home.Home"
             android:exported="true"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_home">
         </activity>
-        <activity
-            android:name=".ui.home.fragments.MainActivity"
-            android:exported="true"/>
     </application>
 
 </manifest>

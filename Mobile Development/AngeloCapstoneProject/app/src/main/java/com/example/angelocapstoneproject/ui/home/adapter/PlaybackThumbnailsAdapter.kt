@@ -3,7 +3,7 @@ package com.example.angelocapstoneproject.ui.home.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.angelocapstoneproject.data.model.PlaybackThumbnail
+import com.example.angelocapstoneproject.data.local.model.PlaybackThumbnail
 import com.example.angelocapstoneproject.databinding.PlaybacksThumbnailItemLayoutBinding
 import com.example.angelocapstoneproject.domain.helper.load
 

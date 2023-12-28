@@ -49,6 +49,41 @@
             app:layout_constraintTop_toBottomOf="@id/et_cam_name"
             android:hint="Device IP Address"/>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_emergency_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/emergency_call_number"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/grey_75"
+            app:layout_constraintTop_toBottomOf="@id/et_cam_ip"/>
+
+        <View
+            android:id="@+id/sp_container_month"
+            style="@style/SpinnerContainerStyle"
+            app:layout_constraintTop_toTopOf="@id/sp_emergency_contact"
+            app:layout_constraintBottom_toBottomOf="@id/sp_emergency_contact"
+            app:layout_constraintStart_toStartOf="@id/sp_emergency_contact"
+            app:layout_constraintEnd_toEndOf="@id/sp_emergency_contact"
+            tools:viewBindingIgnore="true"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_emergency_contact"
+            style="@style/SpinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="32dp"
+            app:layout_constraintStart_toStartOf="@id/tv_emergency_call"
+            app:layout_constraintTop_toBottomOf="@id/tv_emergency_call"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/SpinnerDropDownImageViewStyle"
+            app:layout_constraintTop_toTopOf="@id/sp_container_month"
+            app:layout_constraintBottom_toBottomOf="@id/sp_container_month"
+            app:layout_constraintEnd_toEndOf="@id/sp_container_month"/>
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_save_edit"
@@ -57,10 +92,23 @@
             android:text="Save"
             android:background="@drawable/grey_rad8_bg"
             android:textAllCaps="false"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="14dp"
             android:textColor="@color/white_10"
-            app:layout_constraintTop_toBottomOf="@id/et_cam_ip"
+            app:layout_constraintTop_toBottomOf="@id/sp_emergency_contact"
             app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_delete"
+            android:layout_width="78dp"
+            android:layout_height="38dp"
+            android:text="Delete"
+            android:background="@drawable/grey_rad8_bg"
+            android:textAllCaps="false"
+            android:layout_marginTop="14dp"
+            android:visibility="gone"
+            android:textColor="@color/white_10"
+            app:layout_constraintTop_toBottomOf="@id/sp_emergency_contact"
+            app:layout_constraintStart_toStartOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

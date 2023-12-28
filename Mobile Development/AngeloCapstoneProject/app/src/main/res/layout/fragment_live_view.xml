@@ -34,9 +34,39 @@
             android:layout_gravity="center"
             android:drawablePadding="4dp"
             android:drawableEnd="@drawable/ic_arrow_down"
-            android:text="Cam 1" />
+            android:text="@string/select_device" />
+
 
     </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        tools:text="Loading.."
+        android:textColor="@color/grey_75"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintTop_toTopOf="@id/stream_view"
+        app:layout_constraintStart_toStartOf="@id/stream_view"
+        app:layout_constraintEnd_toEndOf="@id/stream_view"
+        app:layout_constraintBottom_toBottomOf="@id/stream_view"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_start_try_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_10"
+        android:layout_marginTop="16dp"
+        tools:text="@string/try_again"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_info"
+        app:layout_constraintStart_toStartOf="@id/tv_info"
+        app:layout_constraintEnd_toEndOf="@id/tv_info"/>
 
 
 

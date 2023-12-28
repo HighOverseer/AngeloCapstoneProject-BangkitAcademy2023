@@ -45,10 +45,12 @@
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     android:drawablePadding="4dp"
                     android:drawableEnd="@drawable/ic_arrow_down"
                     android:textAlignment="center"
-                    android:text="Cam 1" />
+                    android:text="@string/select_device" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -83,12 +85,12 @@
                     android:textAlignment="center"
                     android:layout_gravity="center"
                     android:drawablePadding="4dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     android:drawableEnd="@drawable/ic_arrow_down"
-                    android:text="2023-11-17" />
+                    android:text="@string/select_date" />
 
             </com.google.android.material.card.MaterialCardView>
-
-
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
@@ -96,7 +98,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.5" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -109,7 +110,23 @@
         app:show_buffering="when_playing"
         app:resize_mode="fill"
         app:layout_constraintTop_toBottomOf="@id/mcv_setting"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_call_emergency"
         />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_call_emergency"
+        android:layout_width="138dp"
+        android:layout_height="38dp"
+        android:text="Call Emergency"
+        android:background="@drawable/grey_rad8_bg"
+        android:textAllCaps="false"
+        android:layout_marginTop="14dp"
+        android:visibility="invisible"
+        android:textColor="@color/white_10"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,18 @@
         <item name="android:textColor">@color/white_10</item>
     </style>
 
+    <style name="SplashStyle" parent="Theme.AngeloCapstoneProject.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="MaterialAlertDialog.Material3">
+        <item name="android:textColor">@color/grey_75</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:itemBackground">@color/grey_75</item>
+
+        <item name="android:backgroundTint">@color/teal_20</item>
+    </style>
+
     <style name="Theme.AngeloCapstoneProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
     </style>
 
@@ -26,6 +38,10 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">21sp</item>
         <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Spinner3Style">
+        <item name="android:textColor">@color/black_100</item>
     </style>
 
     <style name="Theme.AngeloCapstoneProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
@@ -47,7 +63,7 @@
     </style>
 
     <style name="SpinnerDropDownImageViewStyle">
-        <item name="android:layout_width">34dp</item>
+        <item name="android:layout_width">30dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_marginEnd">1dp</item>
         <item name="android:src">@drawable/ic_drop_with_bg</item>

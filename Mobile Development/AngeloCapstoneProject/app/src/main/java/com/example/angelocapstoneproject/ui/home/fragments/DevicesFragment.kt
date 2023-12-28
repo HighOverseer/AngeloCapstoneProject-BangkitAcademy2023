@@ -6,16 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.angelocapstoneproject.data.model.Device
+import com.example.angelocapstoneproject.data.local.model.Device
 import com.example.angelocapstoneproject.databinding.FragmentDevicesBinding
 import com.example.angelocapstoneproject.domain.dummies.home.DeviceDummy
-import com.example.angelocapstoneproject.ui.home.OnAddDialogDeviceListener
+import com.example.angelocapstoneproject.domain.helper.obtainViewModel
+import com.example.angelocapstoneproject.ui.home.OnDialogDeviceListener
 import com.example.angelocapstoneproject.ui.home.adapter.DevicesAdapter
+import com.example.angelocapstoneproject.ui.home.viewmodels.DeviceViewModel
 
 
-class DevicesFragment : Fragment(), OnAddDialogDeviceListener {
+class DevicesFragment : Fragment(), OnDialogDeviceListener {
 
     private var binding:FragmentDevicesBinding?=null
+    private lateinit var viewModel: DeviceViewModel
 
     private lateinit var adapter:DevicesAdapter
 
@@ -30,21 +33,28 @@ class DevicesFragment : Fragment(), OnAddDialogDeviceListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel = obtainViewModel(requireActivity().application, this)
+
+
 
         binding?.apply {
-            adapter = DevicesAdapter(
-                DeviceDummy.getDevices(),
-                onItemClicked = ::onDeviceItemClicked,
-                false
-            )
-            rvDevices.adapter = adapter
-            rvDevices.layoutManager = LinearLayoutManager(requireActivity())
+            viewModel.devices.observe(viewLifecycleOwner){
+                adapter = DevicesAdapter(
+                    it,
+                    onItemClicked = ::onDeviceItemClicked,
+                    false
+                )
+                rvDevices.adapter = adapter
+            }
 
             fab.setOnClickListener {
                 val dialogFragment = AddEditDeviceDialogFragment()
                 dialogFragment.show(childFragmentManager, null)
             }
         }
+
+
+
     }
 
     private fun onDeviceItemClicked(device: Device){
@@ -53,21 +63,24 @@ class DevicesFragment : Fragment(), OnAddDialogDeviceListener {
             putLong(AddEditDeviceDialogFragment.DEVICE_ID_KEY, device.id)
             putString(AddEditDeviceDialogFragment.DEVICE_NAME_KEY, device.name)
             putString(AddEditDeviceDialogFragment.DEVICE_IP_KEY, device.ipAdress)
+            putLong(AddEditDeviceDialogFragment.DEVICE_CONTACT_ID_KEY, device.emergencyContactId)
         }
         dialogFragment.arguments = args
         dialogFragment.show(childFragmentManager, null)
     }
 
-    override fun onAddDevice(newDevice: Device) {
-        DeviceDummy.addDevice(newDevice)
-        adapter.notifyItemInserted(DeviceDummy.getDevices().lastIndex)
+    override fun onAddDevice(newDevice: Device) : Boolean{
+        viewModel.insertDevice(newDevice)
+        return true
     }
 
-    override fun onEditDevice(selectedDevice: Device) {
-        val devices = DeviceDummy.getDevices()
-        val index = devices.indexOfFirst { it.id == selectedDevice.id }
-        DeviceDummy.setDevice(selectedDevice, index)
-        adapter.notifyItemChanged(index)
+    override fun onEditDevice(selectedDevice: Device) : Boolean{
+        viewModel.updateDevice(selectedDevice)
+        return true
+    }
+
+    override fun onDeleteDevice(selectedDevice: Device) {
+        viewModel.deleteDevice(selectedDevice)
     }
 
     override fun onDestroyView() {

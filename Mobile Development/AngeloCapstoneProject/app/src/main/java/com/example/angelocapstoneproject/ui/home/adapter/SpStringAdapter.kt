@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.example.angelocapstoneproject.R
-import com.example.angelocapstoneproject.data.model.Device
+import com.example.angelocapstoneproject.data.local.model.Device
 import com.example.angelocapstoneproject.databinding.SpinnerDropdownItemBinding
 import com.example.angelocapstoneproject.databinding.SpinnerItemBinding
 

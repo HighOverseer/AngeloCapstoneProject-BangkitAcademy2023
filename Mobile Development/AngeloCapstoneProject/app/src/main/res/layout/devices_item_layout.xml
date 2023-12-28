@@ -6,8 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:contentPadding="8dp"
     app:strokeWidth="0dp"
-    app:cardCornerRadius="0dp"
-    android:backgroundTint="@color/teal_20"
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="@color/teal_10"
+    app:cardUseCompatPadding="true"
     app:strokeColor="@android:color/transparent">
 
     <androidx.constraintlayout.widget.ConstraintLayout

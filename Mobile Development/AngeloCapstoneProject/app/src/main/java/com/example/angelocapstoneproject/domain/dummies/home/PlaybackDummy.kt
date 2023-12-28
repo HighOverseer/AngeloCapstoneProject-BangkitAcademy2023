@@ -1,7 +1,7 @@
 package com.example.angelocapstoneproject.domain.dummies.home
 
 import com.example.angelocapstoneproject.R
-import com.example.angelocapstoneproject.data.model.PlaybackThumbnail
+import com.example.angelocapstoneproject.data.local.model.PlaybackThumbnail
 
 object PlaybackDummy {
 
@@ -14,6 +14,7 @@ object PlaybackDummy {
     )
 
     fun getPlaybackThumbnails():List<PlaybackThumbnail>{
+
         return List(10){ i ->
             PlaybackThumbnail(
                 imageExamples[(0..4).shuffled()[0]],

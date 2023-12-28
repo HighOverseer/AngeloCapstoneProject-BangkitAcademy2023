@@ -8,16 +8,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.example.angelocapstoneproject.data.model.Device
+import com.example.angelocapstoneproject.data.local.model.Device
 import com.example.angelocapstoneproject.databinding.FragmentDialogChooseDeviceBinding
 import com.example.angelocapstoneproject.domain.dummies.home.DeviceDummy
+import com.example.angelocapstoneproject.domain.helper.obtainViewModel
 import com.example.angelocapstoneproject.ui.home.adapter.DevicesAdapter
 import com.example.angelocapstoneproject.ui.home.OnChooseDialogDeviceListener
+import com.example.angelocapstoneproject.ui.home.viewmodels.ChooseDeviceDialogViewModel
 
 class ChooseDeviceDialogFragment:DialogFragment() {
 
     private var binding:FragmentDialogChooseDeviceBinding?=null
-
+    private lateinit var viewModel:ChooseDeviceDialogViewModel
     private lateinit var listener : OnChooseDialogDeviceListener
 
     override fun onAttach(context: Context) {
@@ -61,14 +63,17 @@ class ChooseDeviceDialogFragment:DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel = obtainViewModel(requireActivity().application, this)
 
         binding?.apply {
-            val adapter = DevicesAdapter(DeviceDummy.getDevices(), ::onChosenItemClicked, true)
-            rvDevices.adapter = adapter
+            viewModel.devices.observe(viewLifecycleOwner){
+                val adapter = DevicesAdapter(it, ::onChosenItemClicked, true)
+                rvDevices.adapter = adapter
+            }
         }
     }
 
-    private fun onChosenItemClicked(selectedDevice:Device){
+    private fun onChosenItemClicked(selectedDevice: Device){
         listener.onChoose(selectedDevice)
         dialog?.dismiss()
     }

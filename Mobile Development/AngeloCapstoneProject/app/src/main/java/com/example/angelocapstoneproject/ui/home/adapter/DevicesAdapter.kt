@@ -3,7 +3,7 @@ package com.example.angelocapstoneproject.ui.home.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.angelocapstoneproject.data.model.Device
+import com.example.angelocapstoneproject.data.local.model.Device
 import com.example.angelocapstoneproject.databinding.DevicesDialogItemLayoutBinding
 import com.example.angelocapstoneproject.databinding.DevicesItemLayoutBinding
 

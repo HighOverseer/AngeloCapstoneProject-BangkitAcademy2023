@@ -88,7 +88,7 @@ Angelo Flask API Repository : https://github.com/lintangtrisnadi/Angelo-Flask-AP
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/HighOverseer/AngeloCapstoneProject-BangkitAcademy2023
+    git clone https://github.com/lintangtrisnadi/Angelo-Flask-API
     ```
 
 2. Install virtual environment:
